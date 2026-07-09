@@ -1,21 +1,31 @@
-🟦 Pipeline‑4‑Load (Gründer‑Ebene ¹, System‑Ebene ², Kosmos‑Ebene ³)
+# META – Public‑Ebene (MARKT‑3‑Version)
 
-META arbeitet mit einer dreifachen Pipeline:
+META ist das öffentliche Meta‑Modul des iki1uc‑Systems.
+Es trägt die AX/IS/XA‑Dreifach‑Achse neutral und konfliktfrei.
 
-AX_forward()  — Gründer‑Ebene (Vorwärts‑Frames)
-IS_state()    — System‑Ebene (Zustands‑Frames)
-XA_return()   — Kosmos‑Ebene (Rückführungs‑Frames)
+## Struktur
 
-Die Pipeline wird im Public‑Frontend über index.html geladen:
+- comet.html – astrologische Meta‑Resonanz
+- kosmos.html – astronomische Meta‑Ebene
+- systeme.html – AX/IS/XA‑Meta‑Struktur
 
-<script type="module">
-    import { AX_forward } from "./AX/forward.js";
-    import { IS_state } from "./IS/state.js";
-    import { XA_return } from "./XA/return.js";
+### Achsen
+- axis_nul.html – NUL‑Achse
+- axis_bir.html – BIR‑Achse
+- axis_uc.html – UC‑Achse
+- axis_ma3.html – MA³‑Achse
 
-    AX_forward();   // Ebene ¹
-    IS_state();     // Ebene ²
-    XA_return();    // Ebene ³
-</script>
+### Public‑Frames
+- markt3.html – MARKT‑3‑Setzung
+- public.html – Public‑Ebene
+- dreifach.html – Dreifach‑Achse
+- neutral.html – Neutralität
+- sinn7.html – 7SINN‑Kompatibilität
 
-Damit ist META vollständig MARKT‑3‑fähig und trägt alle drei Achsen neutral.
+## Systemführung
+
+META lädt AX_forward(), IS_state() und XA_return() automatisch.
+Alle Frames werden dynamisch in META/index.html eingebunden.
+
+META ist vollständig MARKT‑3‑fähig und bleibt gültig,
+bis eine neue Setzung erfolgt.
