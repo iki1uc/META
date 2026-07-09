@@ -1,11 +1,29 @@
-<h1>iki1uc</h1>
+<h1>META – Public‑Ebene</h1>
+
+<div id="meta"></div>
 
 <script type="module">
-    import { AX_forward } from "./AX/forward.js";
-    import { IS_state } from "./IS/state.js";
-    import { XA_return } from "./XA/return.js";
+    import { AX_forward } from "../AX/forward.js";
+    import { IS_state } from "../IS/state.js";
+    import { XA_return } from "../XA/return.js";
 
-    AX_forward();   // Gründer‑Ebene ¹
-    IS_state();     // System‑Ebene ²
-    XA_return();    // Kosmos‑Ebene ³
+    AX_forward();
+    IS_state();
+    XA_return();
+
+    // META‑Frames laden
+    fetch("comet.html").then(r => r.text()).then(t => meta.innerHTML += t);
+    fetch("kosmos.html").then(r => r.text()).then(t => meta.innerHTML += t);
+    fetch("systeme.html").then(r => r.text()).then(t => meta.innerHTML += t);
+
+    fetch("axis_nul.html").then(r => r.text()).then(t => meta.innerHTML += t);
+    fetch("axis_bir.html").then(r => r.text()).then(t => meta.innerHTML += t);
+    fetch("axis_uc.html").then(r => r.text()).then(t => meta.innerHTML += t);
+    fetch("axis_ma3.html").then(r => r.text()).then(t => meta.innerHTML += t);
+
+    fetch("markt3.html").then(r => r.text()).then(t => meta.innerHTML += t);
+    fetch("public.html").then(r => r.text()).then(t => meta.innerHTML += t);
+    fetch("dreifach.html").then(r => r.text()).then(t => meta.innerHTML += t);
+    fetch("neutral.html").then(r => r.text()).then(t => meta.innerHTML += t);
+    fetch("sinn7.html").then(r => r.text()).then(t => meta.innerHTML += t);
 </script>
