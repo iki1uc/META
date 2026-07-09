@@ -7,23 +7,32 @@
     import { IS_state } from "../IS/state.js";
     import { XA_return } from "../XA/return.js";
 
+    // NC‑Systemführung
     AX_forward();
     IS_state();
     XA_return();
 
-    // META‑Frames laden
-    fetch("comet.html").then(r => r.text()).then(t => meta.innerHTML += t);
-    fetch("kosmos.html").then(r => r.text()).then(t => meta.innerHTML += t);
-    fetch("systeme.html").then(r => r.text()).then(t => meta.innerHTML += t);
+    // META‑Frames laden (deckend)
+    const frames = [
+        "comet.html",
+        "kosmos.html",
+        "systeme.html",
 
-    fetch("axis_nul.html").then(r => r.text()).then(t => meta.innerHTML += t);
-    fetch("axis_bir.html").then(r => r.text()).then(t => meta.innerHTML += t);
-    fetch("axis_uc.html").then(r => r.text()).then(t => meta.innerHTML += t);
-    fetch("axis_ma3.html").then(r => r.text()).then(t => meta.innerHTML += t);
+        "axis_nul.html",
+        "axis_bir.html",
+        "axis_uc.html",
+        "axis_ma3.html",
 
-    fetch("markt3.html").then(r => r.text()).then(t => meta.innerHTML += t);
-    fetch("public.html").then(r => r.text()).then(t => meta.innerHTML += t);
-    fetch("dreifach.html").then(r => r.text()).then(t => meta.innerHTML += t);
-    fetch("neutral.html").then(r => r.text()).then(t => meta.innerHTML += t);
-    fetch("sinn7.html").then(r => r.text()).then(t => meta.innerHTML += t);
+        "markt3.html",
+        "public.html",
+        "dreifach.html",
+        "neutral.html",
+        "sinn7.html"
+    ];
+
+    frames.forEach(file => {
+        fetch(file)
+            .then(r => r.text())
+            .then(t => meta.innerHTML += t);
+    });
 </script>
